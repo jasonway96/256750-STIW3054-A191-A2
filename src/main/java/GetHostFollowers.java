@@ -39,66 +39,53 @@ public class GetHostFollowers
         }
     }
 
-    public static LinkedList<info> findAll() throws IOException, JSONException {
+    public static LinkedList<info> findAll() throws IOException, JSONException
+    {
         LinkedList<info> info = new LinkedList<info>();
 
         int total = 0;
         int repoTotal = 0;
-        int followingTotal = 0;
-        int starTotal = 0;
+        String test = null;
 
         JSONArray json = readJsonFromUrl("https://api.github.com/users/jasonway96/followers");
-        /*System.out.println(json.toString());
-        System.out.println(json.getJSONArray(1));*/
 
-
-
-            for (int i = 0; i < json.length(); i++) {
+            for (int i = 0; i < json.length(); i++)
+            {
                 JSONObject jsonObject = json.getJSONObject(i);
                 String hostFollowers = jsonObject.optString("login");
                 String hostLink = jsonObject.optString("followers_url");
                 String hostRepo = jsonObject.optString("repos_url");
-                String hostFollowing = jsonObject.optString("received_events_url");
+                String hostFollowing = jsonObject.optString("subscriptions_url");
                 String hostURL = jsonObject.optString("html_url");
-//                System.out.println(i + 1 + ": " + hostFollowers);
                 JSONArray json1 = readJsonFromUrl(hostLink);
                 JSONArray json2 = readJsonFromUrl(hostRepo);
                 JSONArray json3 = readJsonFromUrl(hostFollowing);
-//                JSONArray json4 = readJsonFromUrl(hostStar);
 
-
-                for (int j = 0; j < json1.length(); j++) {
+                for (int j = 0; j < json1.length(); j++)
+                {
                     JSONObject jsonObject1 = json1.getJSONObject(j);
-                    String followers = jsonObject1.optString("login");
+                    jsonObject1.optString("login");
                     total = 1 + j++;
                 }
 
-                for (int k = 0; k < json2.length(); k++) {
+                for (int k = 0; k < json2.length(); k++)
+                {
                     JSONObject jsonObject2 = json2.getJSONObject(k);
-                    String repo = jsonObject2.optString("id");
+                    jsonObject2.optString("id");
                     repoTotal = 1 + k++;
                 }
 
-                for (int l = 0; l < json3.length(); l++) {
+                for (int l = 0; l < json3.length(); l++)
+                {
                     JSONObject jsonObject3 = json3.getJSONObject(l);
-                    String following = jsonObject3.optString("id");
-                    followingTotal = 1 + l++;
+                    jsonObject3.optString("name");
                 }
 
-//                for (int m = 0; m < json4.length(); m++) {
-//                    JSONObject jsonObject4 = json4.getJSONObject(m);
-//                    String star = jsonObject4.optString("id");
-//                    starTotal = 1 + m++;
-//                }
-
-
-                info.add(new info(hostFollowers, repoTotal, total,followingTotal,hostURL));
+                info.add(new info(hostFollowers, repoTotal, total,test,hostURL));
 
             }
 
             return info;
 
         }
-
-
 }

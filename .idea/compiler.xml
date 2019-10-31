@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="256750-STIW3054-A191-A2" />
         <module name="Assignment2_256750" />
       </profile>
     </annotationProcessing>

@@ -6,13 +6,14 @@ public class info
     private int userFollowing;
     private int userStar;
     private String url;
+    private String subs;
 
-    public info(String followers, int repo,int userFollowers,int userFollowing, String url)
+    public info(String followers, int repo,int userFollowers,String subs, String url)
     {
         this.followers = followers;
         this.repo = repo;
         this.userFollowers = userFollowers;
-        this.userFollowing = userFollowing;
+        this.subs = subs;
         this.url = url;
     }
 
@@ -50,14 +51,14 @@ public class info
         this.userFollowers = userFollowers;
     }
 
-    public int getUserFollowing()
+    public String getSubs()
     {
-        return userFollowing;
+        return subs;
     }
 
-    public void setUserFollowing(int userFollowing)
+    public void setSubs(String subs)
     {
-        this.userFollowing = userFollowing;
+        this.subs = subs;
     }
 
     public String getURL()

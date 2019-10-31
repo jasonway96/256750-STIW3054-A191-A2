@@ -22,7 +22,7 @@ public class WriteExcel
                 header.createCell(0).setCellValue("Total Followers");
                 header.createCell(1).setCellValue("Total User Followers");
                 header.createCell(2).setCellValue("Total Repo");
-                header.createCell(3).setCellValue("Total Event Received");
+                header.createCell(3).setCellValue("Recently Repo");
                 header.createCell(4).setCellValue("URL");
 
                 Row row = sheet.createRow(num);
@@ -37,7 +37,7 @@ public class WriteExcel
                 cellMatric.setCellValue(info.getRepo());
 
                 Cell cellFollowing = row.createCell(3);
-                cellFollowing.setCellValue(info.getUserFollowing());
+                cellFollowing.setCellValue(info.getSubs());
 
                 Cell cellStar = row.createCell(4);
                 cellStar.setCellValue(info.getURL());
