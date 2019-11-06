@@ -12,9 +12,7 @@ https://github.com/jasonway96/256750-STIW3054-A191-A2/issues/1
 https://github.com/jasonway96/256750-STIW3054-A191-A2/issues/2
 
 5. My Youtube Link:
-https://youtu.be/t1nMEuineAo
+https://youtu.be/k9kHTMfSzN4
 
 6. References:
-https://www.youtube.com/watch?v=tI1qGwhn_bs
-
-https://www.youtube.com/watch?v=0s8O7jfy3c0
+https://www.youtube.com/watch?v=D-O-vwOXuMI&t=24s
