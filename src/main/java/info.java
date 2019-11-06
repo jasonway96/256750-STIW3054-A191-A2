@@ -3,8 +3,6 @@ public class info
     private String followers;
     private int repo;
     private int userFollowers;
-    private int userFollowing;
-    private int userStar;
     private String url;
     private String subs;
 
